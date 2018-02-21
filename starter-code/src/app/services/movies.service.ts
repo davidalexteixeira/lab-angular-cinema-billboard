@@ -1,10 +1,16 @@
 import { Injectable } from '@angular/core';
+import * as _ from 'underscore';
 
 
 @Injectable()
 export class MoviesService {
 
-  movies: [
+  movies: Array<{}>;
+
+  
+  
+
+  constructor() {this.movies = [
     {
       id: 1,
       title: "The Shawshank Redemption",
@@ -24,7 +30,7 @@ export class MoviesService {
         "Gil Bellows"
       ],
       hours: [String],
-      room: Number
+      room: 1
     }, {
       id: 2,
       title: "The Godfather",
@@ -44,7 +50,7 @@ export class MoviesService {
         "Sterling Hayden"
       ],
       hours: [String],
-      room: Number
+      room: 2
     }, {
       id: 3,
       title: "The Godfather Part II",
@@ -62,9 +68,9 @@ export class MoviesService {
         "Robert De Niro",
         "John Cazale",
         "Talia Shire"
-      ]
+      ],
       hours: [String],
-      room: Number
+      room: 3
     }, {
       id: 4,
       title: "The Dark Knight",
@@ -84,7 +90,7 @@ export class MoviesService {
         "Gary Oldman"
       ],
       hours: [String],
-      room: Number
+      room: 4
     }, 
     {
       id: 5,
@@ -105,19 +111,17 @@ export class MoviesService {
         "Embeth Davidtz"
       ],
       hours: [String],
-      room: Number
+      room: 5
     }
-  ]
-  
+  ]}
 
-  constructor() { }
-
-  getMovies(){
+  getMovies() {
+    console.log(this.movies)
     return this.movies;
   }
 
-  getMovie(id){
-    this.getMovie(id);
+  getMovie(idMovies: Number){
+    return _.findWhere(this.movies, { id: idMovies });
   }
 
 }
