@@ -29,7 +29,7 @@ export class MoviesService {
         "Clancy Brown",
         "Gil Bellows"
       ],
-      hours: [String],
+      runtime: '142 min',
       room: 1
     }, {
       id: 2,
@@ -49,7 +49,7 @@ export class MoviesService {
         "Robert Duvall",
         "Sterling Hayden"
       ],
-      hours: [String],
+      runtime: '175 min',
       room: 2
     }, {
       id: 3,
@@ -69,7 +69,7 @@ export class MoviesService {
         "John Cazale",
         "Talia Shire"
       ],
-      hours: [String],
+      runtime: '202 min',
       room: 3
     }, {
       id: 4,
@@ -89,7 +89,7 @@ export class MoviesService {
         "Maggie Gyllenhaal",
         "Gary Oldman"
       ],
-      hours: [String],
+      runtime: '152 min',
       room: 4
     }, 
     {
@@ -110,7 +110,7 @@ export class MoviesService {
         "Jonathan Sagall",
         "Embeth Davidtz"
       ],
-      hours: [String],
+      runtime: '195 min',
       room: 5
     }
   ]}
